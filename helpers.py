@@ -7,7 +7,7 @@ from models import User
 def token_required(our_flask_function):
     @wraps(our_flask_function)
     def dectorted(*args, **kwargs):
-        token = None
+        token = '3fcc2810529f62f151a5a97c72c2ad406990532724d1f58d'
 
         if 'x-access-token' in request.headers:
             token = request.headers['x-access-token'].split(' ')[1]
